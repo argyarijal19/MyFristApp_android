@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_transform">
+
+    <fragment
+        android:id="@+id/nav_transform"
+        android:name="com.example.argyasfirstapp.ui.transform.TransformFragment"
+        android:label="@string/menu_transform"
+        tools:layout="@layout/fragment_transform" >
+        <action
+            android:id="@+id/action_nav_transform_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.argyasfirstapp.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" >
+        <action
+            android:id="@+id/action_nav_slideshow_self"
+            app:destination="@id/nav_slideshow" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.argyasfirstapp.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
